@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="Введите код"></TextBlock>
-            <TextBox Name="tbcode"></TextBox>
+            <TextBox Name="tbcode" TextChanged="tbcode_TextChanged"></TextBox>
         </StackPanel>
     </Grid>
 </Window>

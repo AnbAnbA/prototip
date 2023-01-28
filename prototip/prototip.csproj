@@ -58,11 +58,18 @@
     <Compile Include="Auto.xaml.cs">
       <DependentUpon>Auto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Congratul.xaml.cs">
+      <DependentUpon>Congratul.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrameC.cs" />
     <Compile Include="WindowCode.xaml.cs">
       <DependentUpon>WindowCode.xaml</DependentUpon>
     </Compile>
     <Page Include="Auto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Congratul.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

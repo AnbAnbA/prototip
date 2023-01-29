@@ -13,7 +13,10 @@
             <TextBlock Text="Введите логин и пароль"></TextBlock>
             <TextBox Name="log" Text="admin"></TextBox>
             <PasswordBox Name="pas" Password="admin"></PasswordBox>
-            <Button x:Name="btnauto" Click="btnauto_Click" Content="Авторизация" Width="100" Height="25"></Button>
+            <Button x:Name="btnauto" Click="btnauto_Click" Content="Авторизация" Width="100" Height="25" IsEnabled="False"></Button>
+            <Label Name="lb" Content="Повторный код можно получить через:" Visibility="Collapsed" ></Label>
+            <Label x:Name="time"  Visibility="Collapsed"></Label>
+            <Button Name="btncode" Width="150" Height="25" Click="btncode_Click" Visibility="Collapsed" IsEnabled="False" Content="Получить код повторно"></Button>
         </StackPanel>
     </Grid>
 </Page>

@@ -22,10 +22,13 @@ namespace prototip
     {
         DispatcherTimer timer= new DispatcherTimer();
         int codec;
-        public WindowCode(int code)
+        int scetc;
+        public WindowCode(int code, int schet)
         {
             InitializeComponent();
             codec= code;
+            scetc = schet;
+            scetc++;
             timer.Interval = new TimeSpan(0, 0, 5);
             timer.Tick += new EventHandler(Timer_Trick);
             timer.Start();
@@ -35,16 +38,21 @@ namespace prototip
         {
             if (tbcode.Text.Length == 5) 
             {
-                if (Convert.ToInt32(tbcode.Text) == codec) 
+                if (Convert.ToInt32(tbcode.Text) == codec)
                 {
                     FrameC.frame.Navigate(new Congratul());
+                }
+                else 
+                {
+                    MessageBox.Show("Код неверный!");
+                    FrameC.frame.Navigate(new Auto(scetc));
                 }
             }
         }
 
         private void Timer_Trick(object sender, EventArgs e) 
         {
-            FrameC.frame.Navigate(new Auto());
+            Close();
         }
     }
 }

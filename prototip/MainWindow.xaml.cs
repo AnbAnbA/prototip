@@ -20,12 +20,12 @@ namespace prototip
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        int schet;
         public MainWindow()
         {
             InitializeComponent();
             FrameC.frame = fr;
-            FrameC.frame.Navigate(new Auto());
+            FrameC.frame.Navigate(new Auto(schet));
         }
 
        

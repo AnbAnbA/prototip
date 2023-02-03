@@ -15,7 +15,8 @@
                 </Canvas>
             </Canvas>
             <StackPanel>
-                <TextBox Name="captchacode" Width="120"></TextBox>
+                <TextBox Name="captchacode" Width="120" TextChanged="captchacode_TextChanged"></TextBox>
+                <Button Margin="5" Click="Button_Click" Width="120" Content="Ввести"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>

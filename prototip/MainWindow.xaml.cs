@@ -25,9 +25,9 @@ namespace prototip
         {
             InitializeComponent();
             FrameC.frame = fr;
-            //FrameC.frame.Navigate(new Auto(schet));
-            WindowCaptcha windowCaptcha = new WindowCaptcha(schet);
-            windowCaptcha.ShowDialog();
+            FrameC.frame.Navigate(new Auto(schet));
+            //WindowCaptcha windowCaptcha = new WindowCaptcha(schet);
+            //windowCaptcha.ShowDialog();
         }
 
        

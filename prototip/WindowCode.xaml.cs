@@ -41,11 +41,13 @@ namespace prototip
                 if (Convert.ToInt32(tbcode.Text) == codec)
                 {
                     FrameC.frame.Navigate(new Congratul());
+                    Close();
                 }
                 else 
                 {
                     MessageBox.Show("Код неверный!");
                     FrameC.frame.Navigate(new Auto(scetc));
+                    Close();
                 }
             }
         }

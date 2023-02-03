@@ -9,6 +9,6 @@
       Title="Congratul">
 
     <Grid>
-        
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="50" Content="Поздравляем!"></Label>
     </Grid>
 </Page>

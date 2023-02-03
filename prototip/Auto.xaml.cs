@@ -24,6 +24,7 @@ namespace prototip
         DispatcherTimer timer = new DispatcherTimer();
         DispatcherTimer tim = new DispatcherTimer();
         int schet = 0;
+        int ch = 0;
         int ti = 5;
         string login = "admin";
         string password = "admin";
@@ -102,7 +103,7 @@ namespace prototip
                                 btnauto.IsEnabled = false;
                                 btncode.Visibility = Visibility.Visible;
                                 btncode.IsEnabled=false;
-                                WindowCaptcha windowCaptcha = new WindowCaptcha(schet);
+                                WindowCaptcha windowCaptcha = new WindowCaptcha(schet, ch);
                                 windowCaptcha.ShowDialog();
                                 
 
@@ -156,8 +157,9 @@ namespace prototip
                                 btncode.Visibility = Visibility.Visible;
                                 btncode.IsEnabled = false;
                                 FrameC.frame.Navigate(new Auto(schet));
-                                WindowCaptcha windowCaptcha = new WindowCaptcha(schet);
+                                WindowCaptcha windowCaptcha = new WindowCaptcha(schet, ch);
                                 windowCaptcha.ShowDialog();
+                                break;
                                
                             }
                             else

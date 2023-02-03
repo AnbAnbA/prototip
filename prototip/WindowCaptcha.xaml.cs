@@ -28,6 +28,7 @@ namespace prototip
             this.schet = schet;
             this.ch = ch;
             string[] capcha=new string[10];
+            string[] capc = new string[10];
             Random random = new Random();
            
             //string symb = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -45,7 +46,7 @@ namespace prototip
                     capcha[i] = Convert.ToString(random.Next(0, 9)) + (char)(random.Next('a', 'z'));
                     ca = ca + capcha[i];
                 }
-              
+                capc[i]=capcha[i];
             }
             //4   5
             ////r    //t

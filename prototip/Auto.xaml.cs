@@ -24,7 +24,7 @@ namespace prototip
         DispatcherTimer timer = new DispatcherTimer();
         int schet = 0;
         int ch = 0;
-        int ti = 60;
+        int ti = 2;
         string login = "admin";
         string password = "admin";
         
@@ -111,7 +111,7 @@ namespace prototip
                             {
                                 btnauto.IsEnabled = true;
                             }
-                            FrameC.frame.Navigate(new Auto(schet));
+                            //FrameC.frame.Navigate(new Auto(schet));
                             break;
                     }
                 }
@@ -141,7 +141,7 @@ namespace prototip
                         case MessageBoxResult.OK:
                             WindowCode windowCode = new WindowCode(code, schet);
                             windowCode.ShowDialog();
-                            schet++;
+                            //schet++;
                             if (schet == 1)
                             {
                                 btnauto.IsEnabled = false;
@@ -165,7 +165,7 @@ namespace prototip
                             {
                                 btnauto.IsEnabled = true;
                             }
-                            FrameC.frame.Navigate(new Auto(schet));
+                            //FrameC.frame.Navigate(new Auto(schet));
                             break;
                     }
                 }

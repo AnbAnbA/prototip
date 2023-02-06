@@ -29,7 +29,7 @@ namespace prototip
             codec= code;
             scetc = schet;
             scetc++;
-            timer.Interval = new TimeSpan(0, 0, 5);
+            timer.Interval = new TimeSpan(0, 0, 10);
             timer.Tick += new EventHandler(Timer_Trick);
             timer.Start();
         }
@@ -41,7 +41,7 @@ namespace prototip
                 if (Convert.ToInt32(tbcode.Text) == codec)
                 {
                     FrameC.frame.Navigate(new Congratul());
-                    Close();
+                    Hide();
                 }
                 else 
                 {
@@ -54,6 +54,7 @@ namespace prototip
 
         private void Timer_Trick(object sender, EventArgs e) 
         {
+            scetc++;
             Close();
         }
     }

@@ -22,10 +22,9 @@ namespace prototip
     public partial class Auto : Page
     {
         DispatcherTimer timer = new DispatcherTimer();
-        DispatcherTimer tim = new DispatcherTimer();
         int schet = 0;
         int ch = 0;
-        int ti = 5;
+        int ti = 60;
         string login = "admin";
         string password = "admin";
         

@@ -30,11 +30,13 @@ namespace prototip
             string[] capcha=new string[10];
             string[] capc = new string[10];
             Random random = new Random();
-           
+
             //string symb = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             //char[] arr_en = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-            
-            for (int i = 0; ca.Length < 8; i++)
+
+            int count = random.Next(7, 10);
+
+            for (int i = 0; ca.Length < count; i++)
             {
                 if (random.Next(1, 3) == 1)
                 {
@@ -50,21 +52,53 @@ namespace prototip
             }
             //4   5
             ////r    //t
-           
-            TextBlock te = new TextBlock()
+            int shar = random.Next(1, 3);
+            if (shar == 1) 
             {
+                TextBlock te = new TextBlock()
+                {
 
-                Text = Convert.ToString(ca.ToString()),
-                Margin = new Thickness(20),
-                Padding = new Thickness(40),
-                FontSize = 15,
-            };
-            canvas.Children.Add(te);
+                    Text = Convert.ToString(ca.ToString()),
+                    Margin = new Thickness(20),
+                    Padding = new Thickness(40),
+                    FontSize = random.Next(13, 18),
+                    FontStyle=FontStyles.Italic,
+                };
+                canvas.Children.Add(te);
+            }
+            else if(shar == 2)
+            {
+                TextBlock te = new TextBlock()
+                {
+
+                    Text = Convert.ToString(ca.ToString()),
+                    Margin = new Thickness(20),
+                    Padding = new Thickness(40),
+                    FontSize = random.Next(13, 18),
+                    FontStyle = FontStyles.Italic,
+                    FontWeight=FontWeights.Bold,
+                };
+                canvas.Children.Add(te);
+            }
+            else if (shar == 3)
+            {
+                TextBlock te = new TextBlock()
+                {
+
+                    Text = Convert.ToString(ca.ToString()),
+                    Margin = new Thickness(20),
+                    Padding = new Thickness(40),
+                    FontSize = random.Next(13, 18),
+                    FontWeight = FontWeights.Bold,
+                };
+                canvas.Children.Add(te);
+            }
+
 
 
             //TextBlock tex = new TextBlock()
             //{
-                
+
             //    Text = Convert.ToString(random.Next(1000000, 999999999)),
             //    Margin = new Thickness(10),
             //    Padding = new Thickness(10),

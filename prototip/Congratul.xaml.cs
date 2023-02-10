@@ -20,9 +20,11 @@ namespace prototip
     /// </summary>
     public partial class Congratul : Page
     {
-        public Congratul()
+        public static int scet=1;
+        public  Congratul()
         {
             InitializeComponent();
+            scet++;
         }
     }
 }

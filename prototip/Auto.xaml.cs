@@ -111,7 +111,7 @@ namespace prototip
                             {
                                 btnauto.IsEnabled = true;
                             }
-                            //FrameC.frame.Navigate(new Auto(schet));
+                           
                             break;
                     }
                 }
@@ -141,31 +141,39 @@ namespace prototip
                         case MessageBoxResult.OK:
                             WindowCode windowCode = new WindowCode(code, schet);
                             windowCode.ShowDialog();
-                            //schet++;
-                            if (schet == 1)
+                            schet++;
+                            if (Congratul.scet > 1)
                             {
-                                btnauto.IsEnabled = false;
-                                btncode.Visibility = Visibility.Visible;
-                                lb.Visibility = Visibility.Visible;
-                                time.Visibility = Visibility.Visible;
-                                timer.Start();
+                                FrameC.frame.Navigate(new Congratul());
                             }
-                            else if (schet == 2)
+                            else 
                             {
-                                btnauto.IsEnabled = false;
-                                btncode.Visibility = Visibility.Visible;
-                                btncode.IsEnabled = false;
-                                FrameC.frame.Navigate(new Auto(schet));
-                                WindowCaptcha windowCaptcha = new WindowCaptcha(schet, ch);
-                                windowCaptcha.ShowDialog();
-                                break;
+                                if (schet == 1)
+                                {
+                                    btnauto.IsEnabled = false;
+                                    btncode.Visibility = Visibility.Visible;
+                                    lb.Visibility = Visibility.Visible;
+                                    time.Visibility = Visibility.Visible;
+                                    timer.Start();
+                                }
+                                else if (schet == 2)
+                                {
+                                    btnauto.IsEnabled = false;
+                                    btncode.Visibility = Visibility.Visible;
+                                    btncode.IsEnabled = false;
+                                    FrameC.frame.Navigate(new Auto(schet));
+                                    WindowCaptcha windowCaptcha = new WindowCaptcha(schet, ch);
+                                    windowCaptcha.ShowDialog();
+                                    break;
+
+                                }
+                                else
+                                {
+                                    btnauto.IsEnabled = true;
+                                }
+                               
                                
                             }
-                            else
-                            {
-                                btnauto.IsEnabled = true;
-                            }
-                            //FrameC.frame.Navigate(new Auto(schet));
                             break;
                     }
                 }

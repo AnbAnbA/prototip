@@ -41,7 +41,7 @@ namespace prototip
                 if (Convert.ToInt32(tbcode.Text) == codec)
                 {
                     FrameC.frame.Navigate(new Congratul());
-                    Hide();
+                    Close();
                 }
                 else 
                 {
